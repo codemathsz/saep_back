@@ -13,6 +13,7 @@ import br.com.senai.saep.atividade_saep.model.Alocacao;
 public interface AlocacaoRepository extends PagingAndSortingRepository<Alocacao, Long>{
 	
 	@Query("SELECT a FROM Alocacao a WHERE a.area = :area")
-	public List<Alocacao> findByArea(@Param("area") int area);
+	public List<Alocacao> findByAreaId(@Param("area") int area);
+	
 
 }
